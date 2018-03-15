@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+   // $("tr").css("background-color", "yellow");
+  //  $("tr:odd").css("background-color", "pink");
+
+    $("button").dblclick(function () {
+        $("tr:odd").toggleClass("blue");
+        $("tr:first").toggleClass("blue3");
+        $("tr:even").toggleClass("blue2");
+        $("table").toggleClass("blue1");
+    });
+       
+	$("h1").hover(function () {
+        $("h1").toggleClass("blue4");
+        });
+    $("#hide").click(function () {
+        $("h1").hide();
+    });
+    $("#show").click(function () {
+        $("h1").show();
+    });
+
+});
+</script>
+    <style>
+        .blue{
+              background-color:palegreen;
+              font-size:30px;
+        }
+        .blue1{
+              background-color:orangered;
+              height:500px;
+              width:700px;
+        }
+         .blue2{
+              background-color:yellow;
+              font-size:30px;
+        }
+         .blue3{
+              background-color:lime;
+               font-size:30px;
+        }
+         .blue4{
+              background-color:lime;
+               font-size:30px;
+               font-style:italic;
+        }
+        tr {
+            background-color:aqua;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <h1>Welcome to My Web Page. I am using Jquery in js and HTML/CSS</h1></br>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+ <table border="1">
+        <tr >
+            <th>Topics Name</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>C# Basic</td>
+            <td>1 week</td>
+        </tr>
+        <tr>
+            <td>Exception Handling</td>
+            <td>2 weeks</td>
+        </tr>
+        <tr>
+            <td>HTML/CSS</td>
+            <td>1 week</td>
+        </tr>
+        <tr>
+            <td>Collection</td>
+            <td>3 weeks</td>
+        </tr>
+        <tr>
+            <td>Multithreading</td>
+            <td>2 weeks</td>
+        </tr>
+    </table>
+
+    <button>Zoom +/- Double Click!</button>
+
+</body>
+</html>
