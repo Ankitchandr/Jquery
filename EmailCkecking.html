@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>Candidate Form Validate Input</h2>
+    <label for="phonenum">First Name</label><br />
+    <input id="numb1"><br/>
+    <p id="demo1"></p>
+   <label for="phonenum">Last Name</label><br />
+    <input id="numb2"><br />
+    <p id="demo2"></p>
+    <label for="phonenum">Email id</label><br />
+    <input id="numb3"><br />
+    <p id="demo3"></p>
+    <label for="phonenum">Password</label><br />
+    <input id="numb4"><br />
+    <p id="demo4"></p>
+    <label for="phonenum">Phone No.</label><br />
+    <input id="numb5"><br />
+    <p id="demo5"></p>
+   
+
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="demo1"></p>
+
+ <style>
+       p{
+         color:red;
+        }
+</style>
+    <script>
+
+
+
+function myFunction() {
+    var x, a, b, c, d, e, text;
+
+    var name = /^\w{2,15}$/;
+    var phone=/^\d{10}$/;
+    var pass= /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z@\d]{8,10}$/;   
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    
+    x = document.getElementById("numb1").value;
+    a = document.getElementById("numb2").value;
+    b = document.getElementById("numb3").value;
+    c = document.getElementById("numb4").value;
+    d = document.getElementById("numb5").value;
+    
+   
+
+     if ( x.match(name)) {
+         text = "correct";
+    } else {
+        text = "Enter 2-15 character";
+    }
+     document.getElementById("demo1").innerHTML = text;
+
+
+
+
+     if (a.match(name)) {
+        text = "correct";
+     } else {
+         text = "Enter 2-15 character";
+     }
+     document.getElementById("demo2").innerHTML = text;
+
+
+
+     if (b.match(mailformat)) {
+         text = "correct";
+     } else {
+         text = "Invalid email id please inter the correct email id";
+     }
+     document.getElementById("demo3").innerHTML = text;
+
+
+     if (c.match(pass)) {
+         text = "correct";
+     } else {
+         text = "Enter at least 8-10 character and one @ must";
+     }
+     document.getElementById("demo4").innerHTML = text;
+
+
+
+     if (d.match(phone)) {
+         text = "correct";
+     } else {
+         text = "Enter 10 digits number";
+     }
+     document.getElementById("demo5").innerHTML = text;
+
+
+
+
+
+
+
+}
+    </script>
+
+</body>
+</html>
