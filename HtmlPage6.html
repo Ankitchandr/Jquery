@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("#test1").text("Banglore!");
+    });
+    $("#btn2").click(function(){
+        $("#test2").html("<b>Ankit chandra!</b>");
+    });
+    $("#btn3").click(function(){
+        $("#test3").val("Super Man");
+    });
+
+    $("#btn4").click(function () {
+        $("p").remove("#test1, #test2");
+    });
+
+
+});
+
+function myFunction1() {
+    location.reload();
+}
+    </script>
+</head>
+<body>
+
+    <p id="test1">I am staing in.</p>
+    <p id="test2">My name is.</p>
+
+    <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
+
+    <button id="btn1">Set Text</button>
+    <button id="btn2">Set HTML</button>
+    <button id="btn3">Set Value</button>
+    <button id="btn4">Remove</button>
+    <button onclick="myFunction1()">Refresh</button>
+
+</body>
+</html>

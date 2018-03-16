@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+</script>
+    
+  <style>
+        table {
+            font-family: 'Times New Roman', Times, serif;
+            border-color: black;
+            width: 100%;
+        }
+
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+        
+        tr:nth-child(odd) {
+            background-color:coral;
+        }
+         th:nth-child(2n+1){
+            background-color:yellow;
+        }
+          th:nth-child(2n){
+            background-color:gold;
+        }
+
+        input {
+            border:double;
+
+        }
+    </style>
+
+
+</head>
+
+
+<body style="background-color:blueviolet">
+   <h1 style="text-align:center">Data Base Table</h1>
+<input id="myInput"  type="text" placeholder="Searching..."/>
+<table>
+    <thead style="background-color:red">
+        <tr><th>Name</th><th>Address</th><th>Email id</th><th>phone no</th><th>Age</th></tr>
+    </thead>
+     <tbody id="myTable">  
+       <tr>
+           <td>Ankit chandra</td>
+           <td>Banglore</td>
+           <td>ankit@gmail.com</td>
+           <td>76785678678</td>
+            <td>25</td>
+       </tr>
+
+
+        <tr>
+            <td>Atish chandra</td>
+            <td>pune</td>
+            <td>kit@gmail.com</td>
+            <td>9999678678</td>
+            <td>23</td>
+        </tr>
+
+
+        <tr>
+            <td>Ram kishor</td>
+            <td>Banglore</td>
+            <td>ramit@gmail.com/td>
+            <td>76785678678</td>
+            <td>28</td>
+        </tr>
+
+
+        <tr>
+            <td>Ruhi</td>
+            <td>Patna</td>
+            <td>Ruhit@gmail.com/td>
+            <td>78885678678</td>
+            <td>26</td>
+        </tr>
+
+        <tr>
+            <td>Mahi kumari</td>
+            <td>Delhi</td>
+            <td>mahiit@gmail.com</td>
+            <td>76335678678</td>
+            <td>21</td>
+        </tr>
+
+
+        <tr>
+            <td>prinsh kumar</td>
+            <td>pune</td>
+            <td>prinsh@gmail.com</td>
+            <td>8899678678</td>
+            <td>23</td>
+        </tr>
+
+
+        <tr>
+            <td>Fishal kumar</td>
+            <td>Mumbai</td>
+            <td>gaaat@gmail.com/td>
+            <td>99785678678</td>
+            <td>23</td>
+        </tr>
+
+
+        <tr>
+            <td>Madeeha Ahamad</td>
+            <td>Agra</td>
+            <td>Ahit@gmail.com/td>
+            <td>7885678678</td>
+            <td>22</td>
+        </tr>
+
+         <tr>
+             <td>Neha Raj</td>
+             <td>Gaya</td>
+             <td>Neit@gmail.com</td>
+             <td>98785678678</td>
+             <td>13</td>
+         </tr>
+
+
+         <tr>
+             <td>Tumpa Das</td>
+             <td>Hydrabad</td>
+             <td>tumpa@gmail.com</td>
+             <td>3499678678</td>
+             <td>29</td>
+         </tr>
+
+
+         <tr>
+             <td>Ram kishor</td>
+             <td>Banglore</td>
+             <td>ramit@gmail.com/td>
+             <td>56785678678</td>
+             <td>23</td>
+         </tr>
+
+
+         <tr>
+             <td>Depa kumari</td>
+             <td>Patna</td>
+             <td>Duhit@gmail.com/td>
+             <td>98885678678</td>
+             <td>26</td>
+         </tr>
+
+         <tr>
+             <td>salonti kumari</td>
+             <td>pune</td>
+             <td>saloni@gmail.com</td>
+             <td>98335678678</td>
+             <td>27</td>
+         </tr>
+
+
+         <tr>
+             <td>Ujala kumar</td>
+             <td>Hydrabad</td>
+             <td>prinsh@gmail.com</td>
+             <td>8899678678</td>
+             <td>23</td>
+         </tr>
+
+
+         <tr>
+             <td>Fishal kumar</td>
+             <td>Mumbai</td>
+             <td>gaaat@gmail.com/td>
+             <td>99785678678</td>
+             <td>23</td>
+         </tr>
+
+
+         <tr>
+             <td>Madeeha Ahamad</td>
+             <td>Agra</td>
+             <td>Ahit@gmail.com/td>
+             <td>7885678678</td>
+             <td>22</td>
+         </tr>
+
+     </tbody>
+
+
+
+
+   
+
+</table>
+</body>
+</html>

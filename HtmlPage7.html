@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+$(document).ready(function(){
+    $("img").click(function(){
+        $("img").animate({
+            left: '350px',
+           // opacity: '0.5',
+            height: '590px',
+            width: '1340px'
+        });
+    });
+
+
+    $("img").dblclick(function () {
+        $("img").animate({
+           
+            // opacity: '0.5',
+            height: '100px',
+            width: '100px'
+        });
+    });
+
+});
+    </script>
+</head>
+<body style="background-color:black">
+
+
+
+    <img src="/images/dd.jpg" height="100" width="100" />
+   
+
+</body>
+</html>
